@@ -1,0 +1,13 @@
+In order to solve the new neighbor problem dynamically, you could use
+balanced binary search tree, like an AVL tree, which recorded the list
+of buildings. Each node in the tree would represent a building, with the
+height as a key. This tree would have efficient insertion operations that
+would maintain balance, which would ensure that the time complexity would
+be logarithmic for a search operation.
+
+When a permit request is submitted, we would traverse the tree to find the
+next tallest building. We would also have to consider the permits that were
+submitted before the current one. To do this, we could change the BST to
+store say the number of permits submitted in a nodes subtree at each node.
+This lets us traverse the tree considering the effect of previous permits
+on the next tallest building.
