@@ -1,0 +1,10 @@
+push_back 9
+push_front 3
+push_mid 5
+get 0
+get 1
+get 2
+push_mid 1
+get 1
+get 2
+end
